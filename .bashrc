@@ -1,4 +1,4 @@
-source ~/my_data/planq/.bash/bash_fzf
+source ~/my_data/pwnbox/.bash/bash_fzf
 
 # Unlimited bash history
 export HISTFILESIZE=
@@ -8,7 +8,7 @@ export HISTTIMEFORMAT="[%Y/%m/%d %T] "
 shopt -s histappend
 
 # Append a few things to PATH
-export PATH=$PATH:~/my_data/planq/scripts:~/my_data/planq/memos:~/go/bin:~/.fzf/bin
+export PATH=$PATH:~/my_data/pwnbox/scripts:~/my_data/pwnbox/memos:~/go/bin:~/.fzf/bin
 
 alias rebash='. ~/.bashrc'
 alias reinit='~/my_data/user_init; rebash'

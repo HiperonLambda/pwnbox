@@ -1,6 +1,0 @@
-#!/bin/bash
-
-echo "
-chmod 0600 id_rsa
-ssh -i id_rsa user@host
-"

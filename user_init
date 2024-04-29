@@ -1,30 +1,30 @@
 #!/bin/bash
-#This script is executed every time your instance is spawned.
+# This script is executed every time your instance is spawned.
 
-# Clone the planq repo and get user_init up to date
+# Clone the pwnbox repo and get user_init up to date
 cd
 cd my_data
-rm -rf planq
-git clone https://github.com/tihomir-kit/planq
-cp ./planq/user_init ./user_init # Ensure we have the latest version of user_init
+rm -rf pwnbox
+git clone https://github.com/HiperonLambda/pwnbox
+cp ./pwnbox/user_init ./user_init # Ensure we have the latest version of user_init
 
-# Append planq .bashrc to .bashrc if it's not already there
-if ! grep -q "planq" ~/.bashrc; then
+# Append pwnbox .bashrc to .bashrc if it's not already there
+if ! grep -q "pwnbox" ~/.bashrc; then
   echo "" >> ~/.bashrc
-  echo "# Planq additions to .bashrc" >> ~/.bashrc
-  echo "source ~/my_data/planq/.bashrc" >> ~/.bashrc
+  echo "# pwnbox additions to .bashrc" >> ~/.bashrc
+  echo "source ~/my_data/pwnbox/.bashrc" >> ~/.bashrc
 fi
 
-# Make planq scripts executable
-for file in ~/my_data/planq/scripts/*;
+# Make pwnbox scripts executable
+for file in ~/my_data/pwnbox/scripts/*;
 do
   if [[ -f $file ]]; then
     chmod +x $file
   fi
 done
 
-# Make planq memos executable
-for file in ~/my_data/planq/memos/*;
+# Make pwnbox memos executable
+for file in ~/my_data/pwnbox/memos/*;
 do
   if [[ -f $file ]]; then
     chmod +x $file
